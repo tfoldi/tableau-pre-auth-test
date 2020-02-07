@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-app.use( function(req) {console.log(JSON.stringify(req.headers))});
+app.use( function(req,_,next) {console.log(JSON.stringify(req.headers)); next()} );
 app.use(bodyParser.json());
 
 //Use this for local testing
