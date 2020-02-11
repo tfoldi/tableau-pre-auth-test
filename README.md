@@ -38,3 +38,12 @@ These are the headers after setting nossl + basic auth:
 {"host":"localhost:3000","authorization":"Basic dGFibGVhdTp0YWJsZWF1","user-agent":"curl/7.54.0","accept":"*/*","content-length":"11","content-type":"application/x-www-form-urlencoded"}
 
 ```
+
+
+In case of TabPy:
+
+```
+  HTTP/1.1 401 Unauthorized..Server: TornadoServer/6.0.3..Content-Type: application/json..Date: Mon, 10 Feb 2020 23:53:24 GMT..Www-Authenticate: Basic realm="TabPy Server"..Content-Length: 77..Vary: Ac
+  cept-Encoding....{"message": "Invalid credentials provided.", "info": "Unauthorized request."}
+
+  ```

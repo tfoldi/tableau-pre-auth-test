@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 //Use this for local testing
 const port = 3000;
 
-var tokenAuth = basicAuth({ authorizer: authorizer });
+var tokenAuth = basicAuth({ authorizer: authorizer, challenge: true });
 
 function authorizer(username, password) {
   const userMatches = basicAuth.safeCompare(username, 'tableau')
@@ -48,7 +48,7 @@ app.get("/info", (req, res) => {
 
 app.post("/evaluate", tokenAuth, (req, res) => {
   console.log(req.auth);
-  res.send([]);
+  res.send("1");
 });
 
 //Local Testing
